@@ -23,6 +23,7 @@ public class Main {
 
         Task mainPageTask = new Task("New main page", TypeOfTask.Feature, 11);
         Task newBugWithSlider = new Task("Need to fix slider on our clients widget", TypeOfTask.Bug, 3);
+
         pm.addTaskToBackLog(mainPageTask);
         pm.addTaskToBackLog(newBugWithSlider);
 
