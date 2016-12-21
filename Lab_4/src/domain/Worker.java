@@ -1,9 +1,11 @@
 package domain;
 
+import java.io.Serializable;
+
 /**
  * Created by Andrew on 21.12.2016.
  */
-public abstract class Worker {
+public abstract class Worker implements Serializable {
     private String firstName;
     private String secondName;
 

@@ -1,9 +1,11 @@
 package domain;
 
+import java.io.Serializable;
+
 /**
  * Created by Andrew on 21.12.2016.
  */
-public class Programmer extends Worker {
+public class Programmer extends Worker  implements Serializable {
 
     private TypeOfProgrammer typeOfProgrammer;
 

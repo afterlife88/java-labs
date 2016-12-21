@@ -2,12 +2,13 @@ package domain;
 
 import exceptions.TaskNotFoundExcpetion;
 
+import java.io.Serializable;
 import java.time.LocalDate;
 
 /**
  * Created by Andrew on 21.12.2016.
  */
-public class ProjectManager extends Worker {
+public class ProjectManager extends Worker  implements Serializable {
 
     private Project workingProject;
 

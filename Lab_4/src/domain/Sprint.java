@@ -2,6 +2,7 @@ package domain;
 
 import exceptions.TaskNotFoundExcpetion;
 
+import java.io.Serializable;
 import java.time.LocalDate;
 import java.time.format.DateTimeFormatter;
 import java.util.ArrayList;
@@ -9,7 +10,7 @@ import java.util.ArrayList;
 /**
  * Created by Andrew on 21.12.2016.
  */
-public class Sprint {
+public class Sprint implements Serializable {
 
     private LocalDate endDate;
     private ArrayList<Task> tasksForSprint;

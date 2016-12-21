@@ -1,11 +1,12 @@
 package domain;
 
+import java.io.Serializable;
 import java.util.ArrayList;
 
 /**
  * Created by Andrew on 21.12.2016.
  */
-public class Project {
+public class Project  implements Serializable {
 
     private ArrayList<Worker> workersOnProject;
     private Backlog backlog;

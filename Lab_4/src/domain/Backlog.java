@@ -1,12 +1,13 @@
 package domain;
 
+import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.Objects;
 
 /**
  * Created by Andrew on 21.12.2016.
  */
-public class Backlog {
+public class Backlog implements Serializable {
 
 
     private ArrayList<Task> listOfTasks;

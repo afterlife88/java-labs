@@ -1,5 +1,6 @@
 import domain.*;
 import exceptions.TaskNotFoundExcpetion;
+import serialization.SerializationService;
 
 import java.time.LocalDate;
 import java.util.ArrayList;
@@ -45,6 +46,12 @@ public class Main {
             System.out.println(obj + "\n");
         }
 
+        SerializationService<Sprint> serializationService = new SerializationService<>();
 
+        serializationService.serialize(firstSprint, "C:\\Projects\\1.txt");
+
+        Sprint deSerializedSprint = serializationService.deSerialize("C:\\Projects\\1.txt");
+
+        System.out.println("Deserialized object: \n" + deSerializedSprint.toString());
     }
 }
