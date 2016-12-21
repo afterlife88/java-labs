@@ -35,5 +35,10 @@ public class ProjectManager extends Worker  implements Serializable {
         return new Sprint(beginDate, endDate, workingProject.getBacklog());
     }
 
+    public void removeWorkerFromProject (Worker worker) {
+        workingProject.removeFromProject(worker);
+        workingProject.getBacklog().unassignTasksForWorker(worker);
+
+    }
 
 }

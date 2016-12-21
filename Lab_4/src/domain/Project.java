@@ -16,6 +16,9 @@ public class Project  implements Serializable {
         backlog = new Backlog();
     }
 
+    public void removeFromProject (Worker worker){
+        workersOnProject.remove(worker);
+    }
     public ArrayList<Worker> getWorkersOnProject() {
         return workersOnProject;
     }

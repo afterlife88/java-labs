@@ -14,11 +14,15 @@ public class Main {
         QualityAssuranceEngineer firstQa = new QualityAssuranceEngineer("Sasha", "Say");
 
 
-        ArrayList<Worker> team = new ArrayList<>();
-        team.add(firstProgrammer);
-        team.add(firstQa);
+        Company company = new Company("Epam");
+        company.addWorkerToCompany(firstProgrammer);
+        company.addWorkerToCompany(firstQa);
 
-        Project projectX = new Project(team);
+        ArrayList<Worker> teamForProject = new ArrayList<>();
+        teamForProject.add(firstProgrammer);
+        teamForProject.add(firstQa);
+
+        Project projectX = new Project(teamForProject);
 
         ProjectManager pm = new ProjectManager("Andrew", "Iasko", projectX);
 
@@ -46,12 +50,23 @@ public class Main {
             System.out.println(obj + "\n");
         }
 
-        SerializationService<Sprint> serializationService = new SerializationService<>();
 
-        serializationService.serialize(firstSprint, "C:\\Projects\\1.txt");
+        pm.removeWorkerFromProject(firstProgrammer);
 
-        Sprint deSerializedSprint = serializationService.deSerialize("C:\\Projects\\1.txt");
 
-        System.out.println("Deserialized object: \n" + deSerializedSprint.toString());
+//        for (Task obj : firstSprint.getTasksForCurrentSprint()){
+//            System.out.println(obj + "\n");
+//        }
+
+        for (Worker worker : projectX.getWorkersOnProject()){
+            System.out.println(worker.toString());
+        }
+//        SerializationService<Sprint> serializationService = new SerializationService<>();
+//
+//        serializationService.serialize(firstSprint, "C:\\Projects\\1.txt");
+//
+//        Sprint deSerializedSprint = serializationService.deSerialize("C:\\Projects\\1.txt");
+//
+//        System.out.println("Deserialized object: \n" + deSerializedSprint.toString());
     }
 }
