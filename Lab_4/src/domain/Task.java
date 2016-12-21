@@ -52,9 +52,13 @@ public class Task implements Serializable {
     }
 
     public void changeStatusOfTask(StatusOfTask status) {
-        if (status == statusOfTask)
-            throw new IllegalArgumentException("Status of task already in requested position!");
         statusOfTask = status;
+    }
+
+    private String assignHelper() {
+        if (!this.isAssigned())
+            return "Not assigned";
+        return assignedWorker.toString();
     }
 
     @Override
@@ -66,9 +70,5 @@ public class Task implements Serializable {
                 "Hours left: " + estimatedHours;
     }
 
-    private String assignHelper() {
-        if (!this.isAssigned())
-            return "Not assigned";
-        return assignedWorker.toString();
-    }
+
 }

@@ -18,7 +18,4 @@ public class Programmer extends Worker  implements Serializable {
     public TypeOfProgrammer getTypeOfProgrammer() {
         return typeOfProgrammer;
     }
-
-
-
 }

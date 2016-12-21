@@ -37,7 +37,7 @@ public class ProjectManager extends Worker  implements Serializable {
 
     public void removeWorkerFromProject (Worker worker) {
         workingProject.removeFromProject(worker);
-        workingProject.getBacklog().unassignTasksForWorker(worker);
+        workingProject.getBacklog().reassignTasksForWorker(worker);
 
     }
 
