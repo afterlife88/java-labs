@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Diagram>
+  <ID>JAVA</ID>
+  <OriginalElement>algorithms</OriginalElement>
+  <nodes>
+    <node x="0.0" y="113.5">algorithms.InsertionSort</node>
+    <node x="150.0" y="113.5">algorithms.BubbleSort</node>
+    <node x="225.0" y="0.0">abstractions.ISort</node>
+    <node x="548.0" y="-10.0">behaviors.SortBehavior</node>
+    <node x="153.5" y="295.0">Main</node>
+    <node x="300.0" y="113.5">algorithms.SelectionSort</node>
+  </nodes>
+  <notes />
+  <edges>
+    <edge source="Main" target="behaviors.SortBehavior">
+      <point x="0.0" y="0.0" />
+      <point x="0.0" y="0.0" />
+    </edge>
+    <edge source="algorithms.BubbleSort" target="abstractions.ISort">
+      <point x="0.0" y="-26.0" />
+      <point x="215.0" y="82.0" />
+      <point x="273.75" y="82.0" />
+      <point x="-16.25" y="26.0" />
+    </edge>
+    <edge source="Main" target="algorithms.InsertionSort">
+      <point x="0.0" y="0.0" />
+      <point x="0.0" y="0.0" />
+    </edge>
+    <edge source="algorithms.SelectionSort" target="abstractions.ISort">
+      <point x="0.0" y="-26.0" />
+      <point x="365.0" y="82.0" />
+      <point x="306.25" y="82.0" />
+      <point x="16.25" y="26.0" />
+    </edge>
+    <edge source="algorithms.InsertionSort" target="abstractions.ISort">
+      <point x="0.0" y="-26.0" />
+      <point x="65.0" y="72.0" />
+      <point x="241.25" y="72.0" />
+      <point x="-48.75" y="26.0" />
+    </edge>
+    <edge source="Main" target="algorithms.BubbleSort">
+      <point x="0.0" y="0.0" />
+      <point x="0.0" y="0.0" />
+    </edge>
+    <edge source="Main" target="algorithms.SelectionSort">
+      <point x="0.0" y="0.0" />
+      <point x="0.0" y="0.0" />
+    </edge>
+    <edge source="behaviors.SortBehavior" target="abstractions.ISort">
+      <point x="0.0" y="0.0" />
+      <point x="0.0" y="0.0" />
+    </edge>
+  </edges>
+  <settings layout="Hierarchic Group" zoom="1.0" x="362.5" y="168.5" />
+  <SelectedNodes />
+  <Categories>
+    <Category>Fields</Category>
+    <Category>Methods</Category>
+    <Category>Properties</Category>
+    <Category>Constructors</Category>
+  </Categories>
+  <SCOPE>All</SCOPE>
+  <VISIBILITY>public</VISIBILITY>
+</Diagram>
+
